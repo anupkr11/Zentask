@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #10b981;
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-primary-800: #065f46;
+  --color-primary-900: #064e3b;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Minimalist SaaS Card Classes (formerly glass) */
+@utility glass {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7; /* zinc-200 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+@utility glass-dark {
+  background-color: #18181b; /* zinc-900 */
+  border: 1px solid #27272a; /* zinc-800 */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+@utility glass-panel {
+  background-color: #fafafa; /* zinc-50 */
+  border: 1px solid #e4e4e7; /* zinc-200 */
+}
+
+@utility glass-panel-dark {
+  background-color: #27272a; /* zinc-800 */
+  border: 1px solid #3f3f46; /* zinc-700 */
+}
+
+/* Global Styles */
+@layer base {
+  body {
+    @apply transition-colors duration-300 font-sans antialiased text-zinc-800 bg-[#fafafa];
+  }
+  
+  .dark body {
+    @apply text-zinc-100 bg-[#09090b];
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-zinc-300 dark:bg-zinc-700 hover:bg-zinc-400 dark:hover:bg-zinc-600;
+}
+
+/* keyframe animations - static/subtle SaaS animations */
+@keyframes subtle-fade {
+  0% { opacity: 0.95; }
+  50% { opacity: 1; }
+  100% { opacity: 0.95; }
+}
+
+@utility animate-float {
+  opacity: 1; /* static — no floating animation in SaaS theme */
+}
+
+@utility animate-pulse-subtle {
+  animation: subtle-fade 3s ease-in-out infinite;
+}
+
+/* Clean Custom Form Control Focus */
+.form-input-focus {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all duration-150;
+}
+
+/* Minimalist Dot Grid Backgrounds */
+.mesh-bg {
+  background-color: #fafafa;
+  background-image: radial-gradient(#e4e4e7 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.mesh-bg-dark {
+  background-color: #09090b;
+  background-image: radial-gradient(#27272a 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+/* Auth pages — always dark, regardless of theme */
+.auth-bg {
+  background-color: #0c0c0e;
+  background-image: radial-gradient(#1f1f23 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
