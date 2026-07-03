@@ -1,6 +1,6 @@
 # ZenTask — Task Management System
 A full-stack productivity platform to create, manage, and track tasks with a Kanban-style board, priority filters, and a real-time workspace health dashboard.
-**Live Demo:** [zentask.kappa.vercel.app](https://zentask.kappa.vercel.app) &nbsp;|&nbsp; **API:** [zentask-backend-618a.onrender.com](https://zentask-backend-618a.onrender.com)
+**Live Demo:** https://zentask-kappa.vercel.app/login  &nbsp;|&nbsp; **API:** https://zentask-backend-618a.onrender.com/
 ---
 ## Screenshots
 > Login Page | Dashboard (Dark Mode) | Dashboard (Light Mode)
