@@ -17,17 +17,6 @@ A full-stack productivity platform to create, manage, and track tasks with a Kan
 ---
 ## Tech Stack
 ### Frontend
-|
- Technology 
-|
- Purpose 
-|
-|
----
-|
----
-|
-|
  React.js (Vite) 
 |
  UI framework 
@@ -53,17 +42,6 @@ A full-stack productivity platform to create, manage, and track tasks with a Kan
  Global auth state 
 |
 ### Backend
-|
- Technology 
-|
- Purpose 
-|
-|
----
-|
----
-|
-|
  Node.js + Express.js 
 |
  REST API server 
@@ -89,17 +67,7 @@ A full-stack productivity platform to create, manage, and track tasks with a Kan
  Environment config 
 |
 ### Deployment
-|
- Service 
-|
- Purpose 
-|
-|
----
-|
----
-|
-|
+
  Vercel 
 |
  Frontend hosting 
@@ -166,25 +134,7 @@ AB_Task/
 ## API Endpoints
 Base URL: `https://zentask-backend-618a.onrender.com/api`
 ### Auth Routes — `/api/auth`
-|
- Method 
-|
- Endpoint 
-|
- Access 
-|
- Description 
-|
-|
---------
-|
-----------
-|
---------
-|
--------------
-|
-|
+
 `POST`
 |
 `/auth/register`
@@ -212,25 +162,7 @@ Base URL: `https://zentask-backend-618a.onrender.com/api`
  Get authenticated user profile 
 |
 ### Task Routes — `/api/tasks`
-|
- Method 
-|
- Endpoint 
-|
- Access 
-|
- Description 
-|
-|
---------
-|
-----------
-|
---------
-|
--------------
-|
-|
+
 `GET`
 |
 `/tasks`
@@ -320,17 +252,7 @@ The app will be running at `http://localhost:5173`
 ---
 ## Environment Variables
 ### Backend (`backend/.env`)
-|
- Variable 
-|
- Description 
-|
-|
-----------
-|
--------------
-|
-|
+
 `PORT`
 |
  Server port (default: 5000) 
